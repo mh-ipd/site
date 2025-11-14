@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu Webpage</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    .banner img { width: 100%; display: block; }
+    nav { background: #333; }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+    nav li { padding: 15px 20px; color: white; cursor: pointer; }
+    nav li:hover { background: #444; }
+    #content { padding: 20px; font-size: 18px; }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <img src="banner_ipd.jpg" alt="Banner" />
+  </div>
+
+  <nav>
+    <ul>
+      <li onclick="showContent('About text goes here.')">About</li>
+      <li onclick="showContent('Core Values & Principles text goes here.')">Core Values & Principles</li>
+      <li onclick="showContent('Services text goes here.')">Services</li>
+      <li onclick="showContent('IPD Team text goes here.')">IPD Team</li>
+      <li onclick="showContent('Rules & Regulations text goes here.')">Rules & Regulations</li>
+      <li onclick="showContent('Contact us text goes here.')">Contact us</li>
+      <li onclick="showContent('Price text goes here.')">Price</li>
+    </ul>
+  </nav>
+
+  <div id="content"> </div>
+
+  <script>
+    function showContent(text) {
+      document.getElementById('content').innerText = text;
+    }
+  </script>
+</body>
+</html>
